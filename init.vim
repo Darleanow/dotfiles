@@ -4,7 +4,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'sheerun/vim-polyglot'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'joshdick/onedark.vim'
+Plug 'folke/tokyonight.nvim'
 
 call plug#end()
 
@@ -29,7 +29,10 @@ require('nvim-treesitter.configs').setup {
 EOF
 
 syntax enable                " Make sure syntax highlighting is enabled
-" set termguicolors          " Optimal for dark color schemes, use 'light' for light color schemes
-colorscheme onedark          " Set the color scheme to gruvbox
-
+set termguicolors          " Optimal for dark color schemes, use 'light' for light color schemes
+let g:tokyonight_style = "night"
+let g:tokyonight_transparent = v:true 
+colorscheme tokyonight
 set number
+highlight Normal guibg=NONE ctermbg=NONE
+highlight NonText guibg=NONE ctermbg=NONE
