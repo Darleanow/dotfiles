@@ -1,0 +1,13 @@
+[user]
+	name = Enzo Hugonnier
+	email = enzohugonn@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
+[color]
+	ui = auto
+[credential]
+	helper = cache --timeout=3600
+[alias]
+	staged = diff --name-only --cached
